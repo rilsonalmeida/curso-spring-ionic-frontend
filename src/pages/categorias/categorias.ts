@@ -29,8 +29,7 @@ export class CategoriasPage {
       error => {});
   }
 
-  showProdutos() {
-    this.navCtrl.push('ProdutosPage');
+  showProdutos(categoria_id : string) {
+    this.navCtrl.push('ProdutosPage', {cat: categoria_id});
   }
-
 }
