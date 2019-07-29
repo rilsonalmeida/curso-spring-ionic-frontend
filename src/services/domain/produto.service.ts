@@ -11,7 +11,7 @@ export class ProdutoService {
     }
 
     findById(produto_id : string) {
-        return this.http.get(<ProdutoDTO>`${API_CONFIG.baseUrl}/produtos/${produto_id}`);
+        return this.http.get<ProdutoDTO>(`${API_CONFIG.baseUrl}/produtos/${produto_id}`);
     }
 
     findByCategoria(categoria_id : string) {
