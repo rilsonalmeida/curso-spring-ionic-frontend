@@ -35,7 +35,7 @@ export class ProdutoDetailPage {
   getImageUrlIfExists() {
     this.produtoService.getImageFromBucket(this.item.id)
       .subscribe(response => {
-        this.item.imageUrl = `${API_CONFIG.bucketBaseUrl}/prod${this.item.id}.jpg}`;
+        this.item.imageUrl = `${API_CONFIG.bucketBaseUrl}/prod${this.item.id}.jpg`;
       }, error => {});
   }
 
